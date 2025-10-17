@@ -1,8 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 
-import { useTranslations } from 'next-intl'
-
 const NotFound = (props) => {
   return (
     <>
