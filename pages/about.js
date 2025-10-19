@@ -1,614 +1,417 @@
 import React from 'react'
 import Head from 'next/head'
 import Navigation from '../components/navigation'
+import HeroSection from '../components/hero-section'
+import Footer from '../components/footer'
+import AboutSection from '../components/about-section'
 
 const About = () => {
   return (
-    <>
-      <div className="about-container">
+    <>    <HeroSection />
+    
+      <div className="min-h-screen bg-white">
          <Head>
            <title>About Us - Shrimantyogi Chatrapati Shivray Upkram LLP</title>
            <meta property="og:title" content="About Us - Shrimantyogi Chatrapati Shivray Upkram LLP" />
+          <meta name="description" content="Learn about Shrimantyogi Chatrapati Shivray Upkram LLP - a leading agricultural export company specializing in premium products and global trade solutions." />
          </Head>
+    
+
         <Navigation />
         
-        <main className="about-main">
-          {/* Hero Section */}
-          <section className="about-hero">
-            <div className="about-hero-content">
-              <div className="about-hero-text">
-                <span className="about-hero-subtitle">About Us</span>
-                <h1 className="about-hero-title">
-                  We are a market leader in the sourcing and exporting of agricultural commodities.
+        <main className="">
+          {/* Hero Section with Agricultural Background */}
+          <section className="relative h-96 lg:h-[500px] overflow-hidden">
+            {/* Agricultural Background Image */}
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              style={{
+                backgroundImage: 'url("/about.jpg")'
+              }}
+            ></div>
+            
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+            
+            {/* Content */}
+            <div className="relative z-10 h-full flex flex-col justify-center items-center text-center">
+              {/* Breadcrumbs */}
+              <nav className="mb-8">
+                <ol className="flex items-center space-x-2 text-sm">
+                  <li>
+                    <a href="/" className="flex items-center text-white hover:text-orange-400 transition-colors duration-200">
+                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                      </svg>
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </li>
+                  <li>
+                    <span className="text-orange-400 font-semibold">About Us</span>
+                  </li>
+                </ol>
+              </nav>
+              
+              {/* Page Title */}
+              <h1 className="text-5xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+                About Us
                 </h1>
-                 <p className="about-hero-description">
-                   Welcome to Shrimantyogi Chatrapati Shivray Upkram LLP. We are a newly founded import-export company dedicated to connecting businesses worldwide. We provide reliable and efficient trade solutions.
-                 </p>
-              </div>
-              <div className="about-hero-image">
-                <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-                  alt="Agricultural Export Business"
-                  className="hero-img"
-                />
-              </div>
             </div>
           </section>
 
-          {/* Mission Section */}
-          <section className="about-mission">
-            <div className="about-mission-content">
-              <div className="mission-text">
-                <h2 className="mission-title">Our Mission</h2>
-                <p className="mission-description">
-                  The world needed quality products in the agro-commodity market which was the reason we marched ahead into this venture.
-                </p>
-                <p className="mission-description">
-                  And so today, our business is assisting the buyers worldwide in procuring the agro commodities they need with their demand in specifications of quality and price. We provide time-definite delivery and end-to-end visibility and control.
+      <AboutSection />
+
+          {/* Team Section */}
+          <section className="py-20  bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              {/* Section Header */}
+              <div className="text-center mb-16">
+                <div className="text-sm font-bold text-orange-600 uppercase tracking-wider mb-4">
+                  Our Leadership
+                </div>
+                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                  Meet Our Team
+                </h2>
+                <div className="w-20 h-1 bg-orange-600 mx-auto mb-8"></div>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                  Our experienced leadership team brings together diverse expertise in technology, fashion, and business management to drive our agricultural export success.
                 </p>
               </div>
-              <div className="mission-image">
-                <img 
-                  src="/aboutus1.jpg" 
-                  alt="Mission"
-                  className="mission-img"
-                />
+
+              {/* Team Members Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Kartikee Rajesh Savale - CMD */}
+                <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
+                  {/* Photo */}
+                  <div className="relative h-80 w-full overflow-hidden">
+                    <img 
+                      src="/Kartikee.jpeg" 
+                      alt="Kartikee Rajesh Savale - CMD"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                      style={{maxWidth: '100%', maxHeight: '100%'}}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="p-8">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-orange-700 transition-colors duration-300">
+                      Kartikee Rajesh Savale
+                    </h3>
+                    <p className="text-lg font-semibold text-orange-600 mb-4">
+                      Chairman cum Managing Director (CMD)
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start">
+                        <svg className="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        <div>
+                          <p className="font-semibold text-gray-900">Education</p>
+                          <p className="text-gray-600">BE - AI & Data Science</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start">
+                        <svg className="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6" />
+                        </svg>
+                        <div>
+                          <p className="font-semibold text-gray-900">Role</p>
+                          <p className="text-gray-600">Strategic Leadership & Technology Innovation</p>
+                        </div>
+                      </div>
+                    </div>
               </div>
+            </div>
+
+                {/* Manisha Rajesh Savale - Founder Director */}
+                <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
+                  {/* Photo */}
+                  <div className="relative h-80 w-full overflow-hidden">
+                    <img 
+                      src="/Manisha.jpeg" 
+                      alt="Manisha Rajesh Savale - Founder Director"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                      style={{maxWidth: '100%', maxHeight: '100%'}}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="p-8">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-orange-700 transition-colors duration-300">
+                      Manisha Rajesh Savale
+                    </h3>
+                    <p className="text-lg font-semibold text-orange-600 mb-4">
+                      Founder Director
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start">
+                        <svg className="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        <div>
+                          <p className="font-semibold text-gray-900">Education</p>
+                          <p className="text-gray-600">B. Voc (Fashion Technology)</p>
+                          <p className="text-gray-600">A & TC, ATD</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start">
+                        <svg className="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6" />
+                        </svg>
+                        <div>
+                          <p className="font-semibold text-gray-900">Role</p>
+                          <p className="text-gray-600">Fashion Technology & Product Development</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Rajesh Uddhav Savale - Founder Director */}
+                <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden">
+                  {/* Photo */}
+                  <div className="relative h-80 w-full overflow-hidden">
+                    <img 
+                      src="/Rajesh.jpeg" 
+                      alt="Rajesh Uddhav Savale - Founder Director"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                      style={{maxWidth: '100%', maxHeight: '100%'}}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+                  
+                  {/* Content */}
+                  <div className="p-8">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-orange-700 transition-colors duration-300">
+                      Rajesh Uddhav Savale
+                    </h3>
+                    <p className="text-lg font-semibold text-orange-600 mb-4">
+                      Founder Director
+                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start">
+                        <svg className="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        <div>
+                          <p className="font-semibold text-gray-900">Education</p>
+                          <p className="text-gray-600">MBA (Finance)</p>
+                          <p className="text-gray-600">EMBA (HRM)</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start">
+                        <svg className="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6" />
+                        </svg>
+                        <div>
+                          <p className="font-semibold text-gray-900">Role</p>
+                          <p className="text-gray-600">Financial Management & Human Resources</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </section>
 
-          {/* Sustainability Section */}
-          <section className="about-sustainability">
-            <div className="sustainability-content">
-              <div className="sustainability-image">
-                <img 
-                  src="/aboutus2.jpg" 
-                  alt="Sustainability"
-                  className="sustainability-img"
-                />
-              </div>
-              <div className="sustainability-text">
-                <h2 className="sustainability-title">Our Commitment to Sustainability</h2>
-                <p className="sustainability-description">
-                  We believe that sustainability is key to the future of agriculture, and we are committed to doing our part to protect the environment and conserve natural resources. We use practices such as crop rotation, natural pest control, and minimal tillage to promote soil health and reduce our environmental impact. We also work to minimize waste and use renewable energy sources in our operations.
+          {/* Certifications Section */}
+          <section className="py-16 bg-gradient-to-br from-gray-50 to-orange-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              {/* Section Header */}
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                  Certifications
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Our official certifications and registrations that demonstrate our commitment to quality and compliance
                 </p>
               </div>
-            </div>
-          </section>
 
-          {/* Customer Service Section */}
-          <section className="about-service">
-            <div className="service-content">
-              <div className="service-text">
-                <h2 className="service-title">Customer Service Excellence</h2>
-                 <p className="service-description">
-                    At Shrimantyogi Chatrapati Shivray Upkram LLP, we are dedicated to providing excellent customer service and satisfaction. We work closely with our customers to understand their needs and to provide them with the best possible products and service. Whether you are a farmer, retailer, or consumer, we are committed to serving you with the highest level of professionalism and care.
-                 </p>
-                <p className="service-description">
-                  Thank you for choosing our company as your source for high-quality agricultural products. We look forward to working with you and contributing to a healthier, more sustainable future for agriculture.
-                </p>
-              </div>
-              <div className="service-image">
-                <img 
-                  src="/aboutus3.jpg" 
-                  alt="Customer Service"
-                  className="service-img"
-                />
+              {/* Certifications Grid */}
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {/* APEDA */}
+                <div className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-dashed border-orange-200 hover:border-orange-400 p-6 text-center">
+                  <div className="mb-4">
+                    <div className="w-16 h-20 bg-red-600 rounded-lg mx-auto relative shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <div className="absolute top-1 left-1 right-1 bottom-1 bg-red-500 rounded-md flex flex-col items-center justify-center">
+                        <div className="w-8 h-1 bg-white rounded mb-1"></div>
+                        <div className="w-8 h-1 bg-white rounded mb-2"></div>
+                        <div className="text-white text-xs font-bold">PDF</div>
+                      </div>
+                      <div className="absolute top-0 right-0 w-4 h-4 bg-red-700 transform rotate-45 origin-bottom-left"></div>
               </div>
             </div>
-          </section>
-
-          {/* Why Choose Us Section */}
-          <section className="about-why-choose">
-            <div className="why-choose-content">
-              <div className="why-choose-header">
-                 <h2 className="why-choose-title">Why Choose Us (Shrimantyogi Chatrapati Shivray Upkram LLP)</h2>
-                <p className="why-choose-subtitle">Discover what makes us the preferred choice for agricultural exports</p>
+                  <h3 className="text-sm font-semibold text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+                    APEDA
+                  </h3>
               </div>
               
-              <div className="why-choose-grid">
-                <div className="why-choose-card">
-                  <div className="card-icon">💡</div>
-                  <h3 className="card-title">Fresh Perspective and Innovation</h3>
-                  <p className="card-description">
-                    As a new player in the import-export industry, we bring fresh ideas and innovative solutions to meet the evolving needs of global trade. Our approach is agile, allowing us to quickly adapt to market changes and technological advancements.
-                  </p>
+                {/* FSSAI */}
+                <div 
+                  className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-dashed border-orange-200 hover:border-orange-400 p-6 text-center cursor-pointer"
+                  onClick={() => window.open('/aboutus3.jpg', '_blank')}
+                >
+                  <div className="mb-4">
+                    <div className="w-16 h-20 bg-red-600 rounded-lg mx-auto relative shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <div className="absolute top-1 left-1 right-1 bottom-1 bg-red-500 rounded-md flex flex-col items-center justify-center">
+                        <div className="w-8 h-1 bg-white rounded mb-1"></div>
+                        <div className="w-8 h-1 bg-white rounded mb-2"></div>
+                        <div className="text-white text-xs font-bold">PDF</div>
+                      </div>
+                      <div className="absolute top-0 right-0 w-4 h-4 bg-red-700 transform rotate-45 origin-bottom-left"></div>
+                    </div>
+                  </div>
+                  <h3 className="text-sm font-semibold text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+                    FSSAI
+                  </h3>
                 </div>
 
-                <div className="why-choose-card">
-                  <div className="card-icon">🌍</div>
-                  <h3 className="card-title">Global Network</h3>
-                  <p className="card-description">
-                    Our extensive network of partners and agents worldwide enables us to provide comprehensive services across multiple regions. We have established strong relationships with suppliers and distributors, ensuring seamless operations.
-                  </p>
+                {/* IEC */}
+                <div 
+                  className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-dashed border-orange-200 hover:border-orange-400 p-6 text-center cursor-pointer"
+                  onClick={() => window.open('/aboutus3.jpg', '_blank')}
+                >
+                  <div className="mb-4">
+                    <div className="w-16 h-20 bg-red-600 rounded-lg mx-auto relative shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <div className="absolute top-1 left-1 right-1 bottom-1 bg-red-500 rounded-md flex flex-col items-center justify-center">
+                        <div className="w-8 h-1 bg-white rounded mb-1"></div>
+                        <div className="w-8 h-1 bg-white rounded mb-2"></div>
+                        <div className="text-white text-xs font-bold">PDF</div>
+                      </div>
+                      <div className="absolute top-0 right-0 w-4 h-4 bg-red-700 transform rotate-45 origin-bottom-left"></div>
+                    </div>
+                  </div>
+                  <h3 className="text-sm font-semibold text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+                    IEC
+                  </h3>
                 </div>
 
-                <div className="why-choose-card">
-                  <div className="card-icon">👥</div>
-                  <h3 className="card-title">Customer-Centric Approach</h3>
-                  <p className="card-description">
-                    Building strong relationships with our clients is at the heart of our business. We prioritize understanding your needs and delivering personalized solutions that ensure your satisfaction and success.
-                  </p>
+                {/* SPICE BOARD UEL */}
+                <div 
+                  className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-dashed border-orange-200 hover:border-orange-400 p-6 text-center cursor-pointer"
+                  onClick={() => window.open('/aboutus3.jpg', '_blank')}
+                >
+                  <div className="mb-4">
+                    <div className="w-16 h-20 bg-red-600 rounded-lg mx-auto relative shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <div className="absolute top-1 left-1 right-1 bottom-1 bg-red-500 rounded-md flex flex-col items-center justify-center">
+                        <div className="w-8 h-1 bg-white rounded mb-1"></div>
+                        <div className="w-8 h-1 bg-white rounded mb-2"></div>
+                        <div className="text-white text-xs font-bold">PDF</div>
+                      </div>
+                      <div className="absolute top-0 right-0 w-4 h-4 bg-red-700 transform rotate-45 origin-bottom-left"></div>
+                    </div>
+                  </div>
+                  <h3 className="text-sm font-semibold text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+                    SPICE BOARD UEL
+                  </h3>
                 </div>
 
-                <div className="why-choose-card">
-                  <div className="card-icon">🤝</div>
-                  <h3 className="card-title">Strategic Partnerships</h3>
-                  <p className="card-description">
-                    Although we are new, we have forged strategic partnerships with reliable suppliers, logistics providers, and customs brokers to ensure seamless operations. These relationships enable us to offer competitive pricing and timely deliveries.
-                  </p>
+                {/* Certificate */}
+                <div 
+                  className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-dashed border-orange-200 hover:border-orange-400 p-6 text-center cursor-pointer"
+                  onClick={() => window.open('/aboutus3.jpg', '_blank')}
+                >
+                  <div className="mb-4">
+                    <div className="w-16 h-20 bg-red-600 rounded-lg mx-auto relative shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <div className="absolute top-1 left-1 right-1 bottom-1 bg-red-500 rounded-md flex flex-col items-center justify-center">
+                        <div className="w-8 h-1 bg-white rounded mb-1"></div>
+                        <div className="w-8 h-1 bg-white rounded mb-2"></div>
+                        <div className="text-white text-xs font-bold">PDF</div>
+                      </div>
+                      <div className="absolute top-0 right-0 w-4 h-4 bg-red-700 transform rotate-45 origin-bottom-left"></div>
+                    </div>
+                  </div>
+                  <h3 className="text-sm font-semibold text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+                    Certificate
+                  </h3>
                 </div>
 
-                <div className="why-choose-card">
-                  <div className="card-icon">✅</div>
-                  <h3 className="card-title">Commitment to Quality and Compliance</h3>
-                  <p className="card-description">
-                    We are dedicated to maintaining high standards of quality and full compliance with international trade regulations. Our meticulous attention to detail ensures that your shipments are handled with care and precision.
-                  </p>
+                {/* FEIO Registration */}
+                <div 
+                  className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-dashed border-orange-200 hover:border-orange-400 p-6 text-center cursor-pointer"
+                  onClick={() => window.open('/aboutus3.jpg', '_blank')}
+                >
+                  <div className="mb-4">
+                    <div className="w-16 h-20 bg-red-600 rounded-lg mx-auto relative shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <div className="absolute top-1 left-1 right-1 bottom-1 bg-red-500 rounded-md flex flex-col items-center justify-center">
+                        <div className="w-8 h-1 bg-white rounded mb-1"></div>
+                        <div className="w-8 h-1 bg-white rounded mb-2"></div>
+                        <div className="text-white text-xs font-bold">PDF</div>
+                      </div>
+                      <div className="absolute top-0 right-0 w-4 h-4 bg-red-700 transform rotate-45 origin-bottom-left"></div>
+                    </div>
+                  </div>
+                  <h3 className="text-sm font-semibold text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+                    FEIO Registration
+                  </h3>
                 </div>
 
-                <div className="why-choose-card">
-                  <div className="card-icon">🌱</div>
-                  <h3 className="card-title">Sustainability Focus</h3>
-                  <p className="card-description">
-                    We are committed to incorporating sustainable practices in our operations. From eco-friendly packaging to reducing our carbon footprint, we strive to minimize our environmental impact.
-                  </p>
+                {/* Rice Exporter Federation */}
+                <div 
+                  className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-dashed border-orange-200 hover:border-orange-400 p-6 text-center cursor-pointer"
+                  onClick={() => window.open('/aboutus3.jpg', '_blank')}
+                >
+                  <div className="mb-4">
+                    <div className="w-16 h-20 bg-red-600 rounded-lg mx-auto relative shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <div className="absolute top-1 left-1 right-1 bottom-1 bg-red-500 rounded-md flex flex-col items-center justify-center">
+                        <div className="w-8 h-1 bg-white rounded mb-1"></div>
+                        <div className="w-8 h-1 bg-white rounded mb-2"></div>
+                        <div className="text-white text-xs font-bold">PDF</div>
+                      </div>
+                      <div className="absolute top-0 right-0 w-4 h-4 bg-red-700 transform rotate-45 origin-bottom-left"></div>
+                    </div>
+                  </div>
+                  <h3 className="text-sm font-semibold text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+                    Rice Exporter Federation
+                  </h3>
                 </div>
 
-                <div className="why-choose-card">
-                  <div className="card-icon">💬</div>
-                  <h3 className="card-title">Transparent Communication</h3>
-                  <p className="card-description">
-                    Clear and open communication is essential to us. We keep you informed at every step of the process, ensuring that you are always aware of the status of your shipments and any developments.
-                  </p>
+                {/* LEI Certificate */}
+                <div 
+                  className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-dashed border-orange-200 hover:border-orange-400 p-6 text-center cursor-pointer"
+                  onClick={() => window.open('/aboutus3.jpg', '_blank')}
+                >
+                  <div className="mb-4">
+                    <div className="w-16 h-20 bg-red-600 rounded-lg mx-auto relative shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <div className="absolute top-1 left-1 right-1 bottom-1 bg-red-500 rounded-md flex flex-col items-center justify-center">
+                        <div className="w-8 h-1 bg-white rounded mb-1"></div>
+                        <div className="w-8 h-1 bg-white rounded mb-2"></div>
+                        <div className="text-white text-xs font-bold">PDF</div>
+                      </div>
+                      <div className="absolute top-0 right-0 w-4 h-4 bg-red-700 transform rotate-45 origin-bottom-left"></div>
+                    </div>
+                  </div>
+                  <h3 className="text-sm font-semibold text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+                    LEI Certificate FY 24-25
+                  </h3>
+                </div>
                 </div>
 
-                <div className="why-choose-card">
-                  <div className="card-icon">💰</div>
-                  <h3 className="card-title">Competitive Pricing</h3>
-                  <p className="card-description">
-                    We offer competitive rates without compromising on quality. Our efficient logistics and strategic partnerships help us reduce costs, which we pass on to our clients.
+              {/* Bottom CTA */}
+              <div className="mt-12 text-center">
+                <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-8 text-white">
+                  <h3 className="text-2xl font-bold mb-4">
+                    Trusted by Regulatory Bodies
+                  </h3>
+                  <p className="text-lg opacity-90 max-w-3xl mx-auto">
+                    Our comprehensive certifications ensure compliance with international standards and demonstrate our commitment to quality, safety, and regulatory excellence in all our export operations.
                   </p>
                 </div>
-
-                <div className="why-choose-card">
-                  <div className="card-icon">⚙️</div>
-                  <h3 className="card-title">Customized Solutions</h3>
-                  <p className="card-description">
-                    We understand that each business has unique needs. Our team works closely with clients to develop tailored solutions that meet their specific requirements, from product sourcing to delivery and beyond.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* CTA Section */}
-          <section className="about-cta">
-            <div className="cta-content">
-              <h2 className="cta-title">Ready to Start Your Export Journey?</h2>
-               <p className="cta-description">
-                 Welcome to Shrimantyogi Chatrapati Shivray Upkram LLP. We are a newly founded import-export company dedicated to connecting businesses worldwide. We provide reliable and efficient trade solutions.
-               </p>
-              <div className="cta-buttons">
-                <button className="cta-button secondary">Contact Us</button>
               </div>
             </div>
           </section>
         </main>
       </div>
-
-      <style jsx>{`
-        .about-container {
-          min-height: 100vh;
-          background: #ffffff;
-        }
-
-        .about-main {
-          padding-top: 80px;
-        }
-
-        /* Hero Section */
-        .about-hero {
-          background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-          padding: 80px 0;
-          position: relative;
-          overflow: hidden;
-        }
-
-        .about-hero::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23b6472f" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23b6472f" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-          opacity: 0.3;
-          z-index: 1;
-        }
-
-        .about-hero-content {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 20px;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 60px;
-          align-items: center;
-          position: relative;
-          z-index: 2;
-        }
-
-        .about-hero-text {
-          animation: fadeInLeft 1s ease-out;
-        }
-
-        .about-hero-subtitle {
-          color: #b6472f;
-          font-size: 16px;
-          font-weight: 600;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          margin-bottom: 20px;
-          display: block;
-        }
-
-        .about-hero-title {
-          font-size: 48px;
-          font-weight: 800;
-          line-height: 1.2;
-          color: #2c3e50;
-          margin-bottom: 24px;
-        }
-
-        .about-hero-description {
-          font-size: 18px;
-          line-height: 1.6;
-          color: #6c757d;
-          margin-bottom: 32px;
-        }
-
-        .about-hero-image {
-          animation: fadeInRight 1s ease-out;
-        }
-
-        .hero-img {
-          width: 100%;
-          height: 400px;
-          object-fit: cover;
-          border-radius: 20px;
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease;
-        }
-
-        .hero-img:hover {
-          transform: scale(1.02);
-        }
-
-        /* Mission Section */
-        .about-mission {
-          padding: 100px 0;
-          background: #ffffff;
-        }
-
-        .about-mission-content {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 20px;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 60px;
-          align-items: center;
-        }
-
-        .mission-title {
-          font-size: 36px;
-          font-weight: 700;
-          color: #2c3e50;
-          margin-bottom: 24px;
-        }
-
-        .mission-description {
-          font-size: 16px;
-          line-height: 1.7;
-          color: #6c757d;
-          margin-bottom: 20px;
-        }
-
-        .mission-img {
-          width: 100%;
-          height: 400px;
-          object-fit: cover;
-          border-radius: 20px;
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Sustainability Section */
-        .about-sustainability {
-          padding: 100px 0;
-          background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        }
-
-        .sustainability-content {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 20px;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 60px;
-          align-items: center;
-        }
-
-        .sustainability-title {
-          font-size: 36px;
-          font-weight: 700;
-          color: #2c3e50;
-          margin-bottom: 24px;
-        }
-
-        .sustainability-description {
-          font-size: 16px;
-          line-height: 1.7;
-          color: #6c757d;
-        }
-
-        .sustainability-img {
-          width: 100%;
-          height: 400px;
-          object-fit: cover;
-          border-radius: 20px;
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Service Section */
-        .about-service {
-          padding: 100px 0;
-          background: #ffffff;
-        }
-
-        .service-content {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 20px;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 60px;
-          align-items: center;
-        }
-
-        .service-title {
-          font-size: 36px;
-          font-weight: 700;
-          color: #2c3e50;
-          margin-bottom: 24px;
-        }
-
-        .service-description {
-          font-size: 16px;
-          line-height: 1.7;
-          color: #6c757d;
-          margin-bottom: 20px;
-        }
-
-        .service-img {
-          width: 100%;
-          height: 400px;
-          object-fit: cover;
-          border-radius: 20px;
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Why Choose Us Section */
-        .about-why-choose {
-          padding: 100px 0;
-          background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        }
-
-        .why-choose-content {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 20px;
-        }
-
-        .why-choose-header {
-          text-align: center;
-          margin-bottom: 60px;
-        }
-
-        .why-choose-title {
-          font-size: 42px;
-          font-weight: 800;
-          color: #2c3e50;
-          margin-bottom: 16px;
-        }
-
-        .why-choose-subtitle {
-          font-size: 18px;
-          color: #6c757d;
-          max-width: 600px;
-          margin: 0 auto;
-        }
-
-        .why-choose-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 30px;
-        }
-
-        .why-choose-card {
-          background: #ffffff;
-          padding: 40px 30px;
-          border-radius: 20px;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-          transition: all 0.3s ease;
-          border: 2px solid transparent;
-        }
-
-        .why-choose-card:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-          border-color: #b6472f;
-        }
-
-        .card-icon {
-          font-size: 48px;
-          margin-bottom: 20px;
-          display: block;
-        }
-
-        .card-title {
-          font-size: 20px;
-          font-weight: 700;
-          color: #2c3e50;
-          margin-bottom: 16px;
-        }
-
-        .card-description {
-          font-size: 14px;
-          line-height: 1.6;
-          color: #6c757d;
-        }
-
-        /* CTA Section */
-        .about-cta {
-          padding: 100px 0;
-          background: linear-gradient(135deg, #b6472f 0%, #d97757 100%);
-          color: #ffffff;
-          text-align: center;
-        }
-
-        .cta-content {
-          max-width: 800px;
-          margin: 0 auto;
-          padding: 0 20px;
-        }
-
-        .cta-title {
-          font-size: 42px;
-          font-weight: 800;
-          margin-bottom: 24px;
-        }
-
-        .cta-description {
-          font-size: 18px;
-          line-height: 1.6;
-          margin-bottom: 40px;
-          opacity: 0.9;
-        }
-
-        .cta-buttons {
-          display: flex;
-          gap: 20px;
-          justify-content: center;
-        }
-
-        .cta-button {
-          padding: 16px 32px;
-          border-radius: 50px;
-          font-size: 16px;
-          font-weight: 600;
-          border: none;
-          cursor: pointer;
-          transition: all 0.3s ease;
-        }
-
-        .cta-button.primary {
-          background: #ffffff;
-          color: #b6472f;
-        }
-
-        .cta-button.primary:hover {
-          background: #f8f9fa;
-          transform: translateY(-2px);
-        }
-
-        .cta-button.secondary {
-          background: transparent;
-          color: #ffffff;
-          border: 2px solid #ffffff;
-        }
-
-        .cta-button.secondary:hover {
-          background: #ffffff;
-          color: #b6472f;
-          transform: translateY(-2px);
-        }
-
-        /* Animations */
-        @keyframes fadeInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        @keyframes fadeInRight {
-          from {
-            opacity: 0;
-            transform: translateX(50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 991px) {
-          .about-hero-content,
-          .about-mission-content,
-          .sustainability-content,
-          .service-content {
-            grid-template-columns: 1fr;
-            gap: 40px;
-          }
-
-          .about-hero-title {
-            font-size: 36px;
-          }
-
-          .why-choose-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-
-          .cta-buttons {
-            flex-direction: column;
-            align-items: center;
-          }
-        }
-
-        @media (max-width: 767px) {
-          .about-hero {
-            padding: 60px 0;
-          }
-
-          .about-hero-title {
-            font-size: 28px;
-          }
-
-          .mission-title,
-          .sustainability-title,
-          .service-title {
-            font-size: 28px;
-          }
-
-          .why-choose-title {
-            font-size: 32px;
-          }
-
-          .why-choose-grid {
-            grid-template-columns: 1fr;
-          }
-
-          .why-choose-card {
-            padding: 30px 20px;
-          }
-        }
-      `}</style>
+      <Footer />
     </>
   )
 }

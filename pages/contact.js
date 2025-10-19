@@ -1,11 +1,13 @@
 import React from 'react'
 import Head from 'next/head'
 import Navigation from '../components/navigation'
-
+import HeroSection from '../components/hero-section'
+import Footer from '../components/footer'
 const Contact = () => {
   return (
     <>
-      <div className="contact-container">
+        <HeroSection />
+      <div className="min-h-screen bg-white">
         <Head>
           <title>Contact Us - Shrimantyogi Chatrapati Shivray Upkram LLP</title>
           <meta property="og:title" content="Contact Us - Shrimantyogi Chatrapati Shivray Upkram LLP" />
@@ -13,139 +15,242 @@ const Contact = () => {
         </Head>
         <Navigation />
         
-        <main className="contact-main">
+        <main className="pt-20">
           {/* Hero Section */}
-          <section className="contact-hero">
-            <div className="contact-hero-content">
-              <div className="contact-hero-text">
-                <span className="contact-hero-subtitle">Contact Us</span>
-                <h1 className="contact-hero-title">
-                  Get in Touch with Our Export Team
+          <section className="relative bg-gradient-to-br from-gray-50 via-orange-50 to-orange-100 py-20 lg:py-32 overflow-hidden">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-20 left-10 w-32 h-32 bg-orange-500 rounded-full blur-3xl"></div>
+              <div className="absolute top-40 right-20 w-24 h-24 bg-orange-400 rounded-full blur-2xl"></div>
+              <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-orange-300 rounded-full blur-3xl"></div>
+            </div>
+            
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <div className="inline-flex items-center bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Contact Us
+              </div>
+              <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+                Get in Touch with Our 
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-700"> Export Team</span>
                 </h1>
-                <p className="contact-hero-description">
+              <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
                   Ready to start your agricultural export journey? Contact our team for personalized solutions and expert guidance.
                 </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact-form" className="inline-flex items-center bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-300">
+                  Send Message
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a href="tel:+91XXXXXXXXXX" className="inline-flex items-center border-2 border-orange-600 text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 hover:text-white transition-all duration-300">
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  Call Now
+                </a>
               </div>
             </div>
           </section>
 
           {/* Contact Information Section */}
-          <section className="contact-info">
-            <div className="contact-info-content">
-              <div className="contact-info-grid">
+          <section className="py-20 lg:py-32 bg-white relative">
+            {/* Section Header */}
+            <div className="text-center mb-16">
+              <div className="text-sm font-bold text-orange-600 uppercase tracking-wider mb-4">
+                Get In Touch
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                Multiple Ways to Connect
+              </h2>
+              <div className="w-20 h-1 bg-orange-600 mx-auto mb-8"></div>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Choose your preferred method to reach our export team. We're here to help with your agricultural export needs.
+              </p>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Phone */}
-                <div className="contact-info-card">
-                  <div className="contact-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9844 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.095 3.90347 2.12787 3.62476 2.21649 3.36162C2.30512 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.59531 1.99522 8.06611 2.16708 8.43376 2.48353C8.8014 2.79999 9.04207 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.89391 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5865 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0554 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <div className="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-gray-100 p-10 text-center overflow-hidden">
+                  {/* Background Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-orange-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Icon */}
+                  <div className="relative z-10 w-20 h-20 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
-                  <h3 className="contact-card-title">Phone</h3>
-                  <p className="contact-card-text">+91 (XXX) XXX-XXXX</p>
-                  <p className="contact-card-subtext">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                  
+                  <h3 className="relative z-10 text-2xl font-bold text-gray-900 mb-4 group-hover:text-orange-700 transition-colors duration-300">Phone</h3>
+                  <p className="relative z-10 text-xl font-semibold text-gray-700 mb-3">+91 (XXX) XXX-XXXX</p>
+                  <p className="relative z-10 text-sm text-gray-500 mb-6">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                  
+                  <a href="tel:+91XXXXXXXXXX" className="relative z-10 inline-flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-300">
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    Call Now
+                  </a>
                 </div>
 
                 {/* Email */}
-                <div className="contact-info-card">
-                  <div className="contact-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <polyline points="22,6 12,13 2,6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <div className="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-gray-100 p-10 text-center overflow-hidden">
+                  {/* Background Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-orange-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Icon */}
+                  <div className="relative z-10 w-20 h-20 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <h3 className="contact-card-title">Email</h3>
-                  <p className="contact-card-text">info@shrimantyogi.com</p>
-                  <p className="contact-card-subtext">We'll respond within 24 hours</p>
+                  
+                  <h3 className="relative z-10 text-2xl font-bold text-gray-900 mb-4 group-hover:text-orange-700 transition-colors duration-300">Email</h3>
+                  <p className="relative z-10 text-xl font-semibold text-gray-700 mb-3">info@shrimantyogi.com</p>
+                  <p className="relative z-10 text-sm text-gray-500 mb-6">We'll respond within 24 hours</p>
+                  
+                  <a href="mailto:info@shrimantyogi.com" className="relative z-10 inline-flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-300">
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    Send Email
+                  </a>
                 </div>
 
                 {/* Address */}
-                <div className="contact-info-card">
-                  <div className="contact-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <div className="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border border-gray-100 p-10 text-center overflow-hidden">
+                  {/* Background Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-orange-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Icon */}
+                  <div className="relative z-10 w-20 h-20 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
-                  <h3 className="contact-card-title">Address</h3>
-                  <p className="contact-card-text">Pune, Maharashtra, India</p>
-                  <p className="contact-card-subtext">Export Business Center</p>
+                  
+                  <h3 className="relative z-10 text-2xl font-bold text-gray-900 mb-4 group-hover:text-orange-700 transition-colors duration-300">Address</h3>
+                  <p className="relative z-10 text-xl font-semibold text-gray-700 mb-3">Pune, Maharashtra, India</p>
+                  <p className="relative z-10 text-sm text-gray-500 mb-6">Export Business Center</p>
+                  
+                  <a href="https://maps.google.com/?q=Pune,Maharashtra,India" target="_blank" rel="noopener noreferrer" className="relative z-10 inline-flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-300">
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    View Map
+                  </a>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Contact Form & Map Section */}
-          <section className="contact-form-map">
-            <div className="contact-form-map-content">
-              {/* Contact Form */}
-              <div className="contact-form-section">
-                <div className="contact-form-header">
-                  <h2 className="contact-form-title">Send us a Message</h2>
-                  <p className="contact-form-subtitle">
-                    Have questions about our export services? We'd love to hear from you.
+          <section id="contact-form" className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 via-orange-50 to-orange-100 relative overflow-hidden">
+            {/* Background Elements */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute top-10 right-10 w-64 h-64 bg-orange-500 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-10 left-10 w-48 h-48 bg-orange-400 rounded-full blur-2xl"></div>
+            </div>
+            
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              {/* Section Header */}
+              <div className="text-center mb-16">
+                <div className="text-sm font-bold text-orange-600 uppercase tracking-wider mb-4">
+                  Get In Touch
+                </div>
+                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                  Send us a Message
+                </h2>
+                <div className="w-20 h-1 bg-orange-600 mx-auto mb-8"></div>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                  Have questions about our export services? We'd love to hear from you. Fill out the form below and we'll get back to you within 24 hours.
                   </p>
                 </div>
                 
-                <form className="contact-form">
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label htmlFor="firstName" className="form-label">First Name</label>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                {/* Contact Form */}
+                <div className="bg-white rounded-3xl shadow-2xl p-10 lg:p-12 relative overflow-hidden">
+                  {/* Form Background Pattern */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-orange-100 rounded-full -translate-y-16 translate-x-16"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-orange-50 rounded-full translate-y-12 -translate-x-12"></div>
+                  
+                  <form className="relative z-10 space-y-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="group">
+                        <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700 mb-3 group-focus-within:text-orange-600 transition-colors duration-200">First Name</label>
                       <input 
                         type="text" 
                         id="firstName" 
                         name="firstName" 
-                        className="form-input"
+                          className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-orange-100 focus:border-orange-500 transition-all duration-300 bg-gray-50 focus:bg-white"
+                          placeholder="Enter your first name"
                         required
                       />
                     </div>
-                    <div className="form-group">
-                      <label htmlFor="lastName" className="form-label">Last Name</label>
+                      <div className="group">
+                        <label htmlFor="lastName" className="block text-sm font-semibold text-gray-700 mb-3 group-focus-within:text-orange-600 transition-colors duration-200">Last Name</label>
                       <input 
                         type="text" 
                         id="lastName" 
                         name="lastName" 
-                        className="form-input"
+                          className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-orange-100 focus:border-orange-500 transition-all duration-300 bg-gray-50 focus:bg-white"
+                          placeholder="Enter your last name"
                         required
                       />
                     </div>
                   </div>
                   
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label htmlFor="email" className="form-label">Email Address</label>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="group">
+                        <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-3 group-focus-within:text-orange-600 transition-colors duration-200">Email Address</label>
                       <input 
                         type="email" 
                         id="email" 
                         name="email" 
-                        className="form-input"
+                          className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-orange-100 focus:border-orange-500 transition-all duration-300 bg-gray-50 focus:bg-white"
+                          placeholder="your.email@company.com"
                         required
                       />
                     </div>
-                    <div className="form-group">
-                      <label htmlFor="phone" className="form-label">Phone Number</label>
+                      <div className="group">
+                        <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-3 group-focus-within:text-orange-600 transition-colors duration-200">Phone Number</label>
                       <input 
                         type="tel" 
                         id="phone" 
                         name="phone" 
-                        className="form-input"
+                          className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-orange-100 focus:border-orange-500 transition-all duration-300 bg-gray-50 focus:bg-white"
+                          placeholder="+91 XXXXX XXXXX"
                         required
                       />
                     </div>
                   </div>
                   
-                  <div className="form-group">
-                    <label htmlFor="company" className="form-label">Company Name</label>
+                    <div className="group">
+                      <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-3 group-focus-within:text-orange-600 transition-colors duration-200">Company Name</label>
                     <input 
                       type="text" 
                       id="company" 
                       name="company" 
-                      className="form-input"
+                        className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-orange-100 focus:border-orange-500 transition-all duration-300 bg-gray-50 focus:bg-white"
+                        placeholder="Your company name (optional)"
                     />
                   </div>
                   
-                  <div className="form-group">
-                    <label htmlFor="subject" className="form-label">Subject</label>
-                    <select id="subject" name="subject" className="form-select" required>
+                    <div className="group">
+                      <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-3 group-focus-within:text-orange-600 transition-colors duration-200">Subject</label>
+                      <select 
+                        id="subject" 
+                        name="subject" 
+                        className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-orange-100 focus:border-orange-500 transition-all duration-300 bg-gray-50 focus:bg-white"
+                        required
+                      >
                       <option value="">Select a subject</option>
                       <option value="export-inquiry">Export Inquiry</option>
                       <option value="product-information">Product Information</option>
@@ -156,36 +261,59 @@ const Contact = () => {
                     </select>
                   </div>
                   
-                  <div className="form-group">
-                    <label htmlFor="message" className="form-label">Message</label>
+                    <div className="group">
+                      <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-3 group-focus-within:text-orange-600 transition-colors duration-200">Message</label>
                     <textarea 
                       id="message" 
                       name="message" 
-                      rows="5" 
-                      className="form-textarea"
-                      placeholder="Tell us about your export requirements..."
+                        rows="6" 
+                        className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-orange-100 focus:border-orange-500 transition-all duration-300 bg-gray-50 focus:bg-white resize-vertical"
+                        placeholder="Tell us about your export requirements, product needs, or any questions you have..."
                       required
                     ></textarea>
                   </div>
                   
-                  <button type="submit" className="form-submit-btn">
+                    <button 
+                      type="submit" 
+                      className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold py-5 px-8 rounded-xl hover:from-orange-600 hover:to-orange-700 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-center group"
+                    >
+                      <svg className="w-5 h-5 mr-3 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                      </svg>
                     Send Message
+                      <svg className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
                   </button>
                 </form>
               </div>
 
               {/* Map Section */}
-              <div className="contact-map-section">
-                <div className="map-header">
-                  <h3 className="map-title">Find Us</h3>
-                  <p className="map-subtitle">Visit our office in Pune</p>
+                <div className="bg-white rounded-3xl shadow-2xl p-10 lg:p-12 relative overflow-hidden">
+                  {/* Map Background Pattern */}
+                  <div className="absolute top-0 left-0 w-40 h-40 bg-orange-100 rounded-full -translate-y-20 -translate-x-20"></div>
+                  <div className="absolute bottom-0 right-0 w-32 h-32 bg-orange-50 rounded-full translate-y-16 translate-x-16"></div>
+                  
+                  <div className="relative z-10 mb-10">
+                    <div className="flex items-center mb-6">
+                      <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mr-4">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="text-3xl font-bold text-gray-900">Find Us</h3>
+                        <p className="text-gray-600 text-lg">Visit our office in Pune</p>
+                      </div>
+                    </div>
                 </div>
                 
-                <div className="map-container">
+                  <div className="relative z-10 rounded-2xl overflow-hidden mb-8 shadow-lg">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.265588128304!2d73.85674331541647!3d18.520430387384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c065144d8d21%3A0xdbde5e14aecf4b90!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1635000000000!5m2!1sen!2sin"
                     width="100%"
-                    height="400"
+                      height="350"
                     style={{ border: 0 }}
                     allowFullScreen=""
                     loading="lazy"
@@ -194,12 +322,46 @@ const Contact = () => {
                   ></iframe>
                 </div>
                 
-                <div className="map-info">
-                  <div className="map-info-item">
-                    <strong>Office Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM
+                  <div className="relative z-10 space-y-6">
+                    <div className="flex items-start p-4 bg-gradient-to-r from-orange-50 to-orange-100 rounded-xl">
+                      <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-gray-900 mb-1">Office Hours</h4>
+                        <p className="text-gray-700">Monday - Friday, 9:00 AM - 6:00 PM</p>
+                        <p className="text-sm text-gray-500">Saturday: 10:00 AM - 2:00 PM</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start p-4 bg-gradient-to-r from-orange-50 to-orange-100 rounded-xl">
+                      <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-gray-900 mb-1">Location</h4>
+                        <p className="text-gray-700">Pune, Maharashtra, India</p>
+                        <p className="text-sm text-gray-500">Export Business Center</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start p-4 bg-gradient-to-r from-orange-50 to-orange-100 rounded-xl">
+                      <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-gray-900 mb-1">Response Time</h4>
+                        <p className="text-gray-700">We respond within 24 hours</p>
+                        <p className="text-sm text-gray-500">Emergency inquiries: Same day</p>
+                      </div>
                   </div>
-                  <div className="map-info-item">
-                    <strong>Location:</strong> Pune, Maharashtra, India
                   </div>
                 </div>
               </div>
@@ -207,327 +369,7 @@ const Contact = () => {
           </section>
         </main>
       </div>
-
-      <style jsx>{`
-        .contact-container {
-          min-height: 100vh;
-          background: #ffffff;
-        }
-
-        .contact-main {
-          padding-top: 80px;
-        }
-
-        /* Hero Section */
-        .contact-hero {
-          background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-          padding: 80px 0;
-          position: relative;
-          overflow: hidden;
-        }
-
-        .contact-hero::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23b6472f" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23b6472f" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-          opacity: 0.3;
-          z-index: 1;
-        }
-
-        .contact-hero-content {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 20px;
-          text-align: center;
-          position: relative;
-          z-index: 2;
-        }
-
-        .contact-hero-subtitle {
-          color: #b6472f;
-          font-size: 16px;
-          font-weight: 600;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          margin-bottom: 20px;
-          display: block;
-        }
-
-        .contact-hero-title {
-          font-size: 48px;
-          font-weight: 800;
-          line-height: 1.2;
-          color: #2c3e50;
-          margin-bottom: 24px;
-        }
-
-        .contact-hero-description {
-          font-size: 18px;
-          line-height: 1.6;
-          color: #6c757d;
-          max-width: 600px;
-          margin: 0 auto;
-        }
-
-        /* Contact Info Section */
-        .contact-info {
-          padding: 100px 0;
-          background: #ffffff;
-        }
-
-        .contact-info-content {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 20px;
-        }
-
-        .contact-info-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 40px;
-        }
-
-        .contact-info-card {
-          background: #ffffff;
-          padding: 40px 30px;
-          border-radius: 20px;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-          text-align: center;
-          transition: all 0.3s ease;
-          border: 2px solid transparent;
-        }
-
-        .contact-info-card:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-          border-color: #b6472f;
-        }
-
-        .contact-icon {
-          width: 60px;
-          height: 60px;
-          background: linear-gradient(135deg, #b6472f, #d97757);
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 auto 20px;
-          color: #ffffff;
-        }
-
-        .contact-card-title {
-          font-size: 20px;
-          font-weight: 700;
-          color: #2c3e50;
-          margin-bottom: 12px;
-        }
-
-        .contact-card-text {
-          font-size: 16px;
-          color: #6c757d;
-          margin-bottom: 8px;
-          font-weight: 600;
-        }
-
-        .contact-card-subtext {
-          font-size: 14px;
-          color: #6c757d;
-          opacity: 0.8;
-        }
-
-        /* Contact Form & Map Section */
-        .contact-form-map {
-          padding: 100px 0;
-          background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        }
-
-        .contact-form-map-content {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 20px;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 60px;
-        }
-
-        .contact-form-section {
-          background: #ffffff;
-          padding: 40px;
-          border-radius: 20px;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-form-header {
-          margin-bottom: 40px;
-        }
-
-        .contact-form-title {
-          font-size: 28px;
-          font-weight: 700;
-          color: #2c3e50;
-          margin-bottom: 12px;
-        }
-
-        .contact-form-subtitle {
-          font-size: 16px;
-          color: #6c757d;
-          line-height: 1.6;
-        }
-
-        .contact-form {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-        }
-
-        .form-row {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 20px;
-        }
-
-        .form-group {
-          display: flex;
-          flex-direction: column;
-        }
-
-        .form-label {
-          font-size: 14px;
-          font-weight: 600;
-          color: #2c3e50;
-          margin-bottom: 8px;
-        }
-
-        .form-input,
-        .form-select,
-        .form-textarea {
-          padding: 12px 16px;
-          border: 2px solid #e9ecef;
-          border-radius: 8px;
-          font-size: 16px;
-          transition: all 0.3s ease;
-          background: #ffffff;
-        }
-
-        .form-input:focus,
-        .form-select:focus,
-        .form-textarea:focus {
-          outline: none;
-          border-color: #b6472f;
-          box-shadow: 0 0 0 3px rgba(182, 71, 47, 0.1);
-        }
-
-        .form-textarea {
-          resize: vertical;
-          min-height: 120px;
-        }
-
-        .form-submit-btn {
-          background: linear-gradient(135deg, #b6472f, #d97757);
-          color: #ffffff;
-          border: none;
-          padding: 16px 32px;
-          border-radius: 8px;
-          font-size: 16px;
-          font-weight: 600;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          margin-top: 10px;
-        }
-
-        .form-submit-btn:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 20px rgba(182, 71, 47, 0.3);
-        }
-
-        .contact-map-section {
-          background: #ffffff;
-          padding: 40px;
-          border-radius: 20px;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .map-header {
-          margin-bottom: 30px;
-        }
-
-        .map-title {
-          font-size: 24px;
-          font-weight: 700;
-          color: #2c3e50;
-          margin-bottom: 8px;
-        }
-
-        .map-subtitle {
-          font-size: 16px;
-          color: #6c757d;
-        }
-
-        .map-container {
-          border-radius: 12px;
-          overflow: hidden;
-          margin-bottom: 20px;
-        }
-
-        .map-info {
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-        }
-
-        .map-info-item {
-          font-size: 14px;
-          color: #6c757d;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 991px) {
-          .contact-info-grid {
-            grid-template-columns: 1fr;
-            gap: 30px;
-          }
-
-          .contact-form-map-content {
-            grid-template-columns: 1fr;
-            gap: 40px;
-          }
-
-          .form-row {
-            grid-template-columns: 1fr;
-          }
-        }
-
-        @media (max-width: 767px) {
-          .contact-hero {
-            padding: 60px 0;
-          }
-
-          .contact-hero-title {
-            font-size: 32px;
-          }
-
-          .contact-info {
-            padding: 60px 0;
-          }
-
-          .contact-form-map {
-            padding: 60px 0;
-          }
-
-          .contact-form-section,
-          .contact-map-section {
-            padding: 30px 20px;
-          }
-
-          .contact-form-title {
-            font-size: 24px;
-          }
-        }
-      `}</style>
+      <Footer />
     </>
   )
 }

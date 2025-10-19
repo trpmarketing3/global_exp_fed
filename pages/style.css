@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
     --dl-layout-size-large: 144px;
     --dl-layout-size-small: 48px;

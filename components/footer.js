@@ -1,359 +1,105 @@
 import React from 'react'
 
-import PropTypes from 'prop-types'
-import { useTranslations } from '../hooks/useTranslation'
-
-const Footer = (props) => {
+const Footer = () => {
   return (
-    <>
-      <footer
-        className={`footer-footer section-container ${props.rootClassName} `}
-      >
-        <div className="footer-max-width max-content-container">
-          <div className="footer-bottom-container">
-            <div className="footer-left-side">
-              <img
-                alt="image"
-                src="https://play.teleporthq.io/static/svg/placeholders/no-image.svg"
-                className="footer-image"
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center mb-6">
+              <img 
+                src="/logo.png" 
+                alt="Shrimantyogi Logo" 
+                className="w-20 h-20 mr-4"
               />
-              <span className="footer-text10">
-                Register for the most insightful marketing conference of Europe.
-                Over 30 speakers, 2 days full of digital marketing and social
-                media news, best practices and insights from all over the world.
-              </span>
-              <div className="footer-social-media">
-                <span className="footer-text11">Follow market1</span>
-                <div className="footer-container1">
-                  <svg viewBox="0 0 1024 1024" className="footer-icon10">
-                    <path d="M384 384h177.106v90.782h2.532c24.64-44.194 84.958-90.782 174.842-90.782 186.946 0 221.52 116.376 221.52 267.734v308.266h-184.61v-273.278c0-65.184-1.334-149.026-96.028-149.026-96.148 0-110.82 70.986-110.82 144.292v278.012h-184.542v-576z"></path>
-                    <path d="M64 384h192v576h-192v-576z"></path>
-                    <path d="M256 224c0 53.019-42.981 96-96 96s-96-42.981-96-96c0-53.019 42.981-96 96-96s96 42.981 96 96z"></path>
+              <div>
+                <h3 className="text-xl font-bold text-white">Shrimantyogi</h3>
+                <p className="text-gray-400 text-sm">Chatrapati Shivray Upkram LLP</p>
+              </div>
+            </div>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Premium agricultural products and authentic Indian handicrafts for global export. 
+              Quality assurance and competitive pricing for your business needs.
+            </p>
+            <div className="flex space-x-4">
+              <a href="https://www.facebook.com/sheemantyogi.chhatrapati.shivray.udyog.samuh/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors duration-300">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.73 9-4.76 9-9.95z"/>
                   </svg>
-                  <svg viewBox="0 0 1024 1024" className="footer-icon14">
-                    <path d="M512 92.2c136.8 0 153 0.6 206.8 3 50 2.2 77 10.6 95 17.6 23.8 9.2 41 20.4 58.8 38.2 18 18 29 35 38.4 58.8 7 18 15.4 45.2 17.6 95 2.4 54 3 70.2 3 206.8s-0.6 153-3 206.8c-2.2 50-10.6 77-17.6 95-9.2 23.8-20.4 41-38.2 58.8-18 18-35 29-58.8 38.4-18 7-45.2 15.4-95 17.6-54 2.4-70.2 3-206.8 3s-153-0.6-206.8-3c-50-2.2-77-10.6-95-17.6-23.8-9.2-41-20.4-58.8-38.2-18-18-29-35-38.4-58.8-7-18-15.4-45.2-17.6-95-2.4-54-3-70.2-3-206.8s0.6-153 3-206.8c2.2-50 10.6-77 17.6-95 9.2-23.8 20.4-41 38.2-58.8 18-18 35-29 58.8-38.4 18-7 45.2-15.4 95-17.6 53.8-2.4 70-3 206.8-3zM512 0c-139 0-156.4 0.6-211 3-54.4 2.4-91.8 11.2-124.2 23.8-33.8 13.2-62.4 30.6-90.8 59.2-28.6 28.4-46 57-59.2 90.6-12.6 32.6-21.4 69.8-23.8 124.2-2.4 54.8-3 72.2-3 211.2s0.6 156.4 3 211c2.4 54.4 11.2 91.8 23.8 124.2 13.2 33.8 30.6 62.4 59.2 90.8 28.4 28.4 57 46 90.6 59 32.6 12.6 69.8 21.4 124.2 23.8 54.6 2.4 72 3 211 3s156.4-0.6 211-3c54.4-2.4 91.8-11.2 124.2-23.8 33.6-13 62.2-30.6 90.6-59s46-57 59-90.6c12.6-32.6 21.4-69.8 23.8-124.2 2.4-54.6 3-72 3-211s-0.6-156.4-3-211c-2.4-54.4-11.2-91.8-23.8-124.2-12.6-34-30-62.6-58.6-91-28.4-28.4-57-46-90.6-59-32.6-12.6-69.8-21.4-124.2-23.8-54.8-2.6-72.2-3.2-211.2-3.2v0z"></path>
-                    <path d="M512 249c-145.2 0-263 117.8-263 263s117.8 263 263 263 263-117.8 263-263c0-145.2-117.8-263-263-263zM512 682.6c-94.2 0-170.6-76.4-170.6-170.6s76.4-170.6 170.6-170.6c94.2 0 170.6 76.4 170.6 170.6s-76.4 170.6-170.6 170.6z"></path>
-                    <path d="M846.8 238.6c0 33.91-27.49 61.4-61.4 61.4s-61.4-27.49-61.4-61.4c0-33.91 27.49-61.4 61.4-61.4s61.4 27.49 61.4 61.4z"></path>
+              </a>
+              <a href="https://www.linkedin.com/in/shreemantyogichhatrapatishivrayudyogsamuh" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center hover:bg-orange-700 transition-colors duration-300">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                   </svg>
-                  <svg viewBox="0 0 1024 1024" className="footer-icon18">
-                    <path d="M920.021 283.179c12.245 65.237 19.115 140.587 18.645 218.667 0.811 65.195-5.248 139.392-18.645 214.229-2.432 8.875-6.4 17.195-11.605 24.533-9.685 13.696-23.808 24.107-40.491 28.8-25.771 6.869-91.989 11.733-165.419 14.549-95.147 3.669-190.507 3.669-190.507 3.669s-95.36 0-190.507-3.627c-73.429-2.816-139.648-7.637-164.949-14.421-8.747-2.432-16.896-6.315-24.149-11.435-13.269-9.387-23.509-22.869-28.587-39.381-12.16-65.109-18.944-140.203-18.475-218.027-0.896-65.707 5.163-140.459 18.645-215.893 2.432-8.875 6.4-17.195 11.605-24.533 9.685-13.696 23.808-24.107 40.491-28.8 25.771-6.869 91.989-11.733 165.419-14.549 95.147-3.627 190.507-3.627 190.507-3.627s95.36 0 190.549 3.328c73.344 2.56 140.032 6.955 164.523 12.928 9.344 2.688 17.963 7.040 25.515 12.757 13.099 9.899 22.955 23.936 27.435 40.875zM1003.093 263.552c-9.259-36.949-30.635-67.84-59.008-89.301-15.915-12.032-33.963-21.077-53.291-26.667-38.315-9.387-115.029-13.781-185.259-16.213-96.725-3.371-193.536-3.371-193.536-3.371s-96.939 0-193.749 3.712c-70.059 2.688-147.2 7.467-184.192 17.365-37.291 10.539-67.456 32.853-88.064 61.867-11.52 16.256-20.011 34.603-25.045 54.101-0.256 1.024-0.469 2.091-0.64 3.029-14.635 80.981-21.291 161.835-20.309 233.856-0.512 82.091 6.869 163.456 20.352 234.752 0.256 1.323 0.555 2.645 0.896 3.755 10.453 36.693 32.853 66.859 61.909 87.381 15.232 10.752 32.299 18.859 50.389 23.936 37.504 10.027 114.603 14.805 184.661 17.493 96.853 3.712 193.792 3.712 193.792 3.712s96.939 0 193.749-3.712c70.059-2.688 147.157-7.467 184.192-17.365 37.248-10.539 67.456-32.853 88.021-61.867 11.52-16.256 20.053-34.603 25.045-54.059 0.256-1.067 0.512-2.133 0.64-3.029 14.507-80.384 21.163-160.64 20.309-232.107 0.512-82.133-6.869-163.541-20.352-234.837-0.171-0.853-0.341-1.707-0.512-2.432zM458.667 567.509v-132.352l116.352 66.176zM437.077 677.931l245.333-139.52c20.48-11.648 27.648-37.717 16-58.197-3.968-6.997-9.643-12.459-16-16l-245.333-139.52c-20.48-11.648-46.549-4.48-58.197 16-3.84 6.741-5.632 14.080-5.589 21.077v279.040c0 23.552 19.115 42.667 42.667 42.667 7.765 0 15.019-2.091 21.077-5.589z"></path>
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold mb-6 text-orange-500">Quick Links</h4>
+            <ul className="space-y-3">
+              <li><a href="/" className="text-gray-300 hover:text-orange-500 transition-colors duration-300">Home</a></li>
+              <li><a href="/about" className="text-gray-300 hover:text-orange-500 transition-colors duration-300">About Us</a></li>
+              <li><a href="/#our-products" className="text-gray-300 hover:text-orange-500 transition-colors duration-300">Our Products</a></li>
+                <li><a href="/contact" className="text-gray-300 hover:text-orange-500 transition-colors duration-300">Contact</a></li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-lg font-semibold mb-6 text-orange-500">Contact Info</h4>
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <svg className="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  <svg viewBox="0 0 1024 1024" className="footer-icon20">
-                    <path d="M1024 226.4c-37.6 16.8-78.2 28-120.6 33 43.4-26 76.6-67.2 92.4-116.2-40.6 24-85.6 41.6-133.4 51-38.4-40.8-93-66.2-153.4-66.2-116 0-210 94-210 210 0 16.4 1.8 32.4 5.4 47.8-174.6-8.8-329.4-92.4-433-219.6-18 31-28.4 67.2-28.4 105.6 0 72.8 37 137.2 93.4 174.8-34.4-1-66.8-10.6-95.2-26.2 0 0.8 0 1.8 0 2.6 0 101.8 72.4 186.8 168.6 206-17.6 4.8-36.2 7.4-55.4 7.4-13.6 0-26.6-1.4-39.6-3.8 26.8 83.4 104.4 144.2 196.2 146-72 56.4-162.4 90-261 90-17 0-33.6-1-50.2-3 93.2 59.8 203.6 94.4 322.2 94.4 386.4 0 597.8-320.2 597.8-597.8 0-9.2-0.2-18.2-0.6-27.2 41-29.4 76.6-66.4 104.8-108.6z"></path>
-                  </svg>
+                <div>
+                  <p className="text-gray-300">Pune, Maharashtra</p>
+                  <p className="text-gray-300">India</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <svg className="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <div>
+                  <p className="text-gray-300">+91 (XXX) XXX-XXXX</p>
+            </div>
+              </div>
+              
+              <div className="flex items-start">
+                <svg className="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <div>
+                  <p className="text-gray-300">info@shrimantyogi.com</p>
                 </div>
               </div>
             </div>
-            <div className="footer-links">
-              <div className="footer-container2">
-                <span className="footer-text12">Product</span>
-                <span className="footer-link">ABOUT</span>
-                <span className="footer-link">Agenda</span>
-                <span className="footer-link">Register</span>
-                <span className="footer-link">Speakers</span>
-                <span className="footer-link">Location</span>
-                <span className="footer-text18 footer-link">Workshops</span>
-              </div>
-              <div className="footer-container3">
-                <span className="footer-text19">
-                  <span>Contact</span>
-                  <br></br>
-                  <span></span>
-                </span>
-                <span className="footer-link">contact us</span>
-                <span className="footer-link">Sponsorship</span>
-                <span className="footer-link">become a speaker</span>
-                <span className="footer-link">partnerships</span>
-                <span className="footer-text26 footer-link">sales</span>
-              </div>
+          </div>
+        </div>
+
+        {/* Bottom Border */}
+        <div className="border-t border-gray-700 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm mb-4 md:mb-0">
+              &copy; 2024 Shrimantyogi Chatrapati Shivray Upkram LLP. All rights reserved.
+            </p>
+            <div className="flex space-x-6">
+              <a href="#" className="text-gray-400 hover:text-orange-500 text-sm transition-colors duration-300">Privacy Policy</a>
+              <a href="#" className="text-gray-400 hover:text-orange-500 text-sm transition-colors duration-300">Terms of Service</a>
+              <a href="#" className="text-gray-400 hover:text-orange-500 text-sm transition-colors duration-300">Cookie Policy</a>
             </div>
           </div>
-          <div className="footer-copyright">
-            <span className="footer-text27">
-              <span>
-                <span>
-                  © All rights reserved
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
-                </span>
-                <span>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
-                </span>
-              </span>
-              <a
-                href="https://www.teleporthq.io"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <span className="footer-text31">@TeleportHQ.</span>
-              </a>
-              <span>
-                <span>
-                  {' '}
-                  Powered by
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
-                </span>
-                <span>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
-                </span>
-              </span>
-              <a
-                href="https://www.vercel.com"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <span className="footer-text35">Vercel</span>
-              </a>
-              <span>
-                <span>
-                  . Image source:
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
-                </span>
-                <span>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
-                </span>
-              </span>
-              <a
-                href="https://www.unsplash.com"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <span className="footer-text39">Unsplash</span>
-              </a>
-              <span>.</span>
-            </span>
           </div>
         </div>
       </footer>
-      <style jsx>
-        {`
-          .footer-footer {
-            background-color: var(--dl-color-scheme-black);
-          }
-          .footer-max-width {
-            align-items: flex-start;
-            flex-direction: column;
-            justify-content: space-between;
-          }
-          .footer-bottom-container {
-            width: 100%;
-            display: flex;
-            margin-bottom: var(--dl-layout-space-sixunits);
-            justify-content: space-between;
-          }
-          .footer-left-side {
-            flex: 0 0 auto;
-            width: 50%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .footer-image {
-            margin-bottom: var(--dl-layout-space-twounits);
-          }
-          .footer-text10 {
-            color: var(--dl-color-scheme-white);
-            max-width: 350px;
-            margin-bottom: 60px;
-            text-transform: none;
-          }
-          .footer-social-media {
-            flex: 0 0 auto;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .footer-text11 {
-            color: var(--dl-color-scheme-white);
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: var(--dl-layout-space-oneandhalfunits);
-          }
-          .footer-container1 {
-            flex: 0 0 auto;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: row;
-          }
-          .footer-icon10 {
-            fill: var(--dl-color-scheme-white);
-            width: 24px;
-            height: 24px;
-            transition: 0.3s;
-            margin-right: var(--dl-layout-space-twounits);
-          }
-          .footer-icon10:hover {
-            fill: var(--dl-color-scheme-brown);
-            cursor: pointer;
-          }
-          .footer-icon14 {
-            fill: var(--dl-color-scheme-white);
-            width: 24px;
-            height: 24px;
-            transition: 0.3s;
-            margin-right: var(--dl-layout-space-twounits);
-          }
-          .footer-icon14:hover {
-            fill: var(--dl-color-scheme-brown);
-            cursor: pointer;
-          }
-          .footer-icon18 {
-            fill: var(--dl-color-scheme-white);
-            width: 24px;
-            height: 24px;
-            transition: 0.3s;
-            margin-right: var(--dl-layout-space-twounits);
-          }
-          .footer-icon18:hover {
-            fill: var(--dl-color-scheme-brown);
-            cursor: pointer;
-          }
-          .footer-icon20 {
-            fill: var(--dl-color-scheme-white);
-            width: 24px;
-            height: 24px;
-            transition: 0.3s;
-          }
-          .footer-icon20:hover {
-            fill: var(--dl-color-scheme-brown);
-            cursor: pointer;
-          }
-          .footer-links {
-            flex: 0 0 auto;
-            width: 40%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: row;
-          }
-          .footer-container2 {
-            flex: 0 0 auto;
-            width: 50%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .footer-text12 {
-            color: var(--dl-color-scheme-white);
-            cursor: default;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 700;
-            margin-bottom: var(--dl-layout-space-threeunits);
-          }
-          .footer-text18 {
-            margin-bottom: 0px;
-          }
-          .footer-container3 {
-            flex: 0 0 auto;
-            width: 50%;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .footer-text19 {
-            color: var(--dl-color-scheme-white);
-            cursor: default;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 700;
-            margin-bottom: var(--dl-layout-space-threeunits);
-          }
-          .footer-text26 {
-            margin-bottom: 0px;
-          }
-          .footer-copyright {
-            flex: 0 0 auto;
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            padding-top: var(--dl-layout-space-twounits);
-            flex-direction: column;
-            padding-bottom: var(--dl-layout-space-twounits);
-          }
-          .footer-text27 {
-            color: var(--dl-color-scheme-white80);
-            font-size: 14px;
-            text-transform: none;
-          }
-          .footer-text31 {
-            text-decoration: underline;
-          }
-          .footer-text35 {
-            text-decoration: underline;
-          }
-          .footer-text39 {
-            text-decoration: underline;
-          }
-          @media (max-width: 991px) {
-            .footer-bottom-container {
-              flex-direction: column-reverse;
-            }
-            .footer-left-side {
-              width: 100%;
-            }
-            .footer-links {
-              width: 100%;
-              margin-bottom: var(--dl-layout-space-threeunits);
-            }
-          }
-          @media (max-width: 479px) {
-            .footer-links {
-              flex-wrap: wrap;
-            }
-            .footer-container2 {
-              width: 100%;
-              margin-bottom: var(--dl-layout-space-threeunits);
-            }
-            .footer-text12 {
-              margin-bottom: var(--dl-layout-space-twounits);
-            }
-            .footer-container3 {
-              width: 100%;
-              margin-bottom: var(--dl-layout-space-threeunits);
-            }
-            .footer-text19 {
-              margin-bottom: var(--dl-layout-space-twounits);
-            }
-          }
-        `}
-      </style>
-    </>
   )
-}
-
-Footer.defaultProps = {
-  rootClassName: '',
-  rootClassName1: '',
-}
-
-Footer.propTypes = {
-  rootClassName: PropTypes.string,
-  rootClassName1: PropTypes.string,
 }
 
 export default Footer
