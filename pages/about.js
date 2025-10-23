@@ -11,9 +11,9 @@ const About = () => {
     
       <div className="min-h-screen bg-white">
          <Head>
-           <title>About Us - Shrimantyogi Chatrapati Shivray Upkram LLP</title>
-           <meta property="og:title" content="About Us - Shrimantyogi Chatrapati Shivray Upkram LLP" />
-          <meta name="description" content="Learn about Shrimantyogi Chatrapati Shivray Upkram LLP - a leading agricultural export company specializing in premium products and global trade solutions." />
+           <title>About Us - Shreemantyogi Chhatrapati Shivray Upakram LLP</title>
+           <meta property="og:title" content="About Us - Shreemantyogi Chhatrapati Shivray Upakram LLP" />
+          <meta name="description" content="Learn about Shreemantyogi Chhatrapati Shivray Upakram LLP - a leading agricultural export company specializing in premium products and global trade solutions." />
          </Head>
     
 

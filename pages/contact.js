@@ -9,9 +9,9 @@ const Contact = () => {
         <HeroSection />
       <div className="min-h-screen bg-white">
         <Head>
-          <title>Contact Us - Shrimantyogi Chatrapati Shivray Upkram LLP</title>
-          <meta property="og:title" content="Contact Us - Shrimantyogi Chatrapati Shivray Upkram LLP" />
-          <meta name="description" content="Get in touch with Shrimantyogi Chatrapati Shivray Upkram LLP for agricultural export services. Contact us via phone, email, or visit our office in Pune." />
+          <title>Contact Us - Shreemantyogi Chhatrapati Shivray Upakram LLP</title>
+          <meta property="og:title" content="Contact Us - Shreemantyogi Chhatrapati Shivray Upakram LLP" />
+          <meta name="description" content="Get in touch with Shreemantyogi Chhatrapati Shivray Upakram LLP for agricultural export services. Contact us via phone, email, or visit our office in Pune." />
         </Head>
         <Navigation />
         
@@ -46,7 +46,7 @@ const Contact = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </a>
-                <a href="tel:+91XXXXXXXXXX" className="inline-flex items-center border-2 border-orange-600 text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 hover:text-white transition-all duration-300">
+                <a href="tel:+917276621572" className="inline-flex items-center border-2 border-orange-600 text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-orange-600 hover:text-white transition-all duration-300">
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
@@ -87,10 +87,10 @@ const Contact = () => {
                   </div>
                   
                   <h3 className="relative z-10 text-2xl font-bold text-gray-900 mb-4 group-hover:text-orange-700 transition-colors duration-300">Phone</h3>
-                  <p className="relative z-10 text-xl font-semibold text-gray-700 mb-3">+91 (XXX) XXX-XXXX</p>
+                  <p className="relative z-10 text-xl font-semibold text-gray-700 mb-3">+91 7276621572</p>
                   <p className="relative z-10 text-sm text-gray-500 mb-6">Mon - Fri: 9:00 AM - 6:00 PM</p>
                   
-                  <a href="tel:+91XXXXXXXXXX" className="relative z-10 inline-flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-300">
+                  <a href="tel:+917276621572" className="relative z-10 inline-flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-300">
                     <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
@@ -111,10 +111,10 @@ const Contact = () => {
                   </div>
                   
                   <h3 className="relative z-10 text-2xl font-bold text-gray-900 mb-4 group-hover:text-orange-700 transition-colors duration-300">Email</h3>
-                  <p className="relative z-10 text-xl font-semibold text-gray-700 mb-3">info@shrimantyogi.com</p>
+                  <p className="relative z-10 text-xl font-semibold text-gray-700 mb-3">arthseva.accttaxhrconsultancy@gmail.com</p>
                   <p className="relative z-10 text-sm text-gray-500 mb-6">We'll respond within 24 hours</p>
                   
-                  <a href="mailto:info@shrimantyogi.com" className="relative z-10 inline-flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-300">
+                  <a href="mailto:arthseva.accttaxhrconsultancy@gmail.com" className="relative z-10 inline-flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-300">
                     <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
@@ -226,7 +226,7 @@ const Contact = () => {
                         id="phone" 
                         name="phone" 
                           className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-orange-100 focus:border-orange-500 transition-all duration-300 bg-gray-50 focus:bg-white"
-                          placeholder="+91 XXXXX XXXXX"
+                          placeholder="+91 7276621572"
                         required
                       />
                     </div>
@@ -318,7 +318,7 @@ const Contact = () => {
                     allowFullScreen=""
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Shrimantyogi Chatrapati Shivray Upkram LLP Location"
+                    title="Shreemantyogi Chhatrapati Shivray Upakram LLP Location"
                   ></iframe>
                 </div>
                 

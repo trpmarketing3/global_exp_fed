@@ -6,7 +6,7 @@ const HeroCarousel = () => {
   const slides = [
     {
       id: 1,
-      title: "— Shrimantyogi Chatrapati Shivray Upkram LLP —",
+      title: "— Shreemantyogi Chhatrapati Shivray Upakram LLP —",
       description: "Premium Export Excellence in Agricultural Products, Spices, Handicrafts & Textiles. We specialize in Onion Powder, Drumstick Powder, Fresh Vegetables, Sugar, Jaggery, Grapes, T-shirts, Pants, Sarees, Spices, Chivda, Handicraft Products, Bamboo Products, and Fresh Fruits & Flowers.",
       buttonText: "MORE ABOUT",
       buttonLink: "/about",
@@ -92,7 +92,7 @@ const HeroCarousel = () => {
               <span className="block">
                 <span className="text-white animate-fastPulse">—</span>
                 <span className="mx-4 bg-gradient-to-r from-white to-orange-200 bg-clip-text text-transparent animate-fastSlideInUp">
-                  Shrimantyogi Chatrapati Shivray Upkram LLP
+                  Shreemantyogi Chhatrapati Shivray Upakram LLP
                 </span>
                 <span className="text-white animate-fastPulse">—</span>
               </span>

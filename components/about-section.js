@@ -16,7 +16,7 @@ const AboutSection = () => {
               {/* Product Image */}
               <div className="p-4 pt-16">
                 <img 
-                  src="/aboutus2.jpg" 
+                  src="/aboutus2.jpg"   
                   alt="Agricultural Products and Spices"
                   className="w-full h-auto object-cover rounded-lg"
                 />
@@ -47,7 +47,7 @@ const AboutSection = () => {
             {/* Company Name */}
             <div>
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 uppercase tracking-tight">
-                Shrimantyogi Chatrapati Shivray Upkram LLP
+                Shreemantyogi Chhatrapati Shivray Upakram LLP
               </h2>
               <div className="w-16 h-1 bg-orange-600 mt-4"></div>
             </div>
@@ -83,7 +83,7 @@ const AboutSection = () => {
                 Call to ask any question
               </h3>
               <p className="text-2xl font-bold text-orange-600">
-                +91-XXX-XXXX-XXXX
+                +91 7276621572
               </p>
             </div>
           </div>

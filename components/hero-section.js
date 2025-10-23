@@ -21,7 +21,7 @@ const HeroSection = () => {
                 </svg>
               </div>
               <div>
-                <p className="font-semibold text-gray-800 text-base">+91-XXX-XXXX-XXXX - Call</p>
+                <p className="font-semibold text-gray-800 text-base">+91 7276621572 - Call</p>
               </div>
             </div>
             
@@ -37,7 +37,7 @@ const HeroSection = () => {
                 </svg>
               </div>
               <div>
-                <p className="font-semibold text-gray-800 text-base">info@shrimantyogi.com - Email</p>
+                <p className="font-semibold text-gray-800 text-base">arthseva.accttaxhrconsultancy@gmail.com - Email</p>
               </div>
             </div>
             
@@ -71,7 +71,7 @@ const HeroSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800 text-sm">+91-XXX-XXXX-XXXX</p>
+                  <p className="font-semibold text-gray-800 text-sm">+91 7276621572</p>
                   <p className="text-gray-600 text-xs">Call</p>
                 </div>
               </div>
@@ -85,7 +85,7 @@ const HeroSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800 text-sm">info@shrimantyogi.com</p>
+                  <p className="font-semibold text-gray-800 text-sm">arthseva.accttaxhrconsultancy@gmail.com</p>
                   <p className="text-gray-600 text-xs">Email</p>
                 </div>
               </div>
@@ -120,7 +120,7 @@ const HeroSection = () => {
                 </svg>
               </div>
               <div>
-                <p className="font-semibold text-gray-800 text-sm">+91-XXX-XXXX-XXXX</p>
+                <p className="font-semibold text-gray-800 text-sm">+91 7276621572</p>
                 <p className="text-gray-600 text-xs">Call</p>
               </div>
             </div>
@@ -134,7 +134,7 @@ const HeroSection = () => {
                 </svg>
               </div>
               <div>
-                <p className="font-semibold text-gray-800 text-sm">info@shrimantyogi.com</p>
+                <p className="font-semibold text-gray-800 text-sm">arthseva.accttaxhrconsultancy@gmail.com</p>
                 <p className="text-gray-600 text-xs">Email</p>
               </div>
             </div>

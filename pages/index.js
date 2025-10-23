@@ -106,8 +106,8 @@ const Home = (props) => {
     <>
       <div className="min-h-screen">
         <Head>
-          <title>Shrimantyogi Chatrapati Shivray Upkram LLP</title>
-          <meta property="og:title" content="Shrimantyogi Chatrapati Shivray Upkram LLP - Premium Agricultural & Handicraft Export" />
+          <title>Shreemantyogi Chhatrapati Shivray Upakram LLP</title>
+          <meta property="og:title" content="Shreemantyogi Chhatrapati Shivray Upakram LLP - Premium Agricultural & Handicraft Export" />
         </Head>
         
         <HeroSection />
