@@ -52,7 +52,7 @@ const HeroSection = () => {
                 </svg>
               </div>
               <div>
-                <p className="font-semibold text-gray-800 text-base">26/3, Sadashiv Colony, Lane No 1, Thergaon, Pune -411 033 - Location</p>
+                <p className="font-semibold text-gray-800 text-base">26/3, Sadashiv Colony, Lane No 1, Thergaon, Pune -411 033, Maharashtra, India - Location</p>
               </div>
             </div>
           </div>
@@ -101,7 +101,7 @@ const HeroSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800 text-sm">26/3, Sadashiv Colony, Lane No 1, Thergaon, Pune -411 033</p>
+                  <p className="font-semibold text-gray-800 text-sm">26/3, Sadashiv Colony, Lane No 1, Thergaon, Pune -411 033, Maharashtra, India</p>
                   <p className="text-gray-600 text-xs">Location</p>
                 </div>
               </div>
@@ -147,7 +147,7 @@ const HeroSection = () => {
                 </svg>
               </div>
               <div>
-                <p className="font-semibold text-gray-800 text-sm">26/3, Sadashiv Colony, Lane No 1, Thergaon, Pune -411 033</p>
+                <p className="font-semibold text-gray-800 text-sm">26/3, Sadashiv Colony, Lane No 1, Thergaon, Pune -411 033, Maharashtra, India</p>
                 <p className="text-gray-600 text-xs">Location</p>
               </div>
             </div>

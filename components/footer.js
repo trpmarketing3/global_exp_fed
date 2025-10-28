@@ -16,7 +16,7 @@ const Footer = () => {
               />
               <div>
                 <h3 className="text-xl font-bold text-white">Shreemantyogi</h3>
-                <p className="text-gray-400 text-sm">Chatrapati Shivray Upkram LLP</p>
+                <p className="text-gray-400 text-sm">Chhatrapati Shivray Upakram LLP</p>
               </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -58,8 +58,7 @@ const Footer = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 <div>
-                  <p className="text-gray-300">26/3, Sadashiv Colony, Lane No 1, Thergaon, Pune -411 033</p>
-                  <p className="text-gray-300">India</p>
+                  <p className="text-gray-300">26/3, Sadashiv Colony, Lane No 1, Thergaon, Pune -411 033, Maharashtra, India</p>
                 </div>
               </div>
               

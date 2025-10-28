@@ -11,7 +11,7 @@ const Contact = () => {
         <Head>
           <title>Contact Us - Shreemantyogi Chhatrapati Shivray Upakram LLP</title>
           <meta property="og:title" content="Contact Us - Shreemantyogi Chhatrapati Shivray Upakram LLP" />
-          <meta name="description" content="Get in touch with Shreemantyogi Chhatrapati Shivray Upakram LLP for agricultural export services. Contact us via phone, email, or visit our office at 26/3, Sadashiv Colony, Lane No 1, Thergaon, Pune -411 033." />
+          <meta name="description" content="Get in touch with Shreemantyogi Chhatrapati Shivray Upakram LLP for agricultural export services. Contact us via phone, email, or visit our office at 26/3, Sadashiv Colony, Lane No 1, Thergaon, Pune -411 033, Maharashtra, India." />
         </Head>
         <Navigation />
         
@@ -136,10 +136,10 @@ const Contact = () => {
                   </div>
                   
                   <h3 className="relative z-10 text-2xl font-bold text-gray-900 mb-4 group-hover:text-orange-700 transition-colors duration-300">Address</h3>
-                  <p className="relative z-10 text-xl font-semibold text-gray-700 mb-3">26/3, Sadashiv Colony, Lane No 1, Thergaon, Pune -411 033</p>
+                  <p className="relative z-10 text-xl font-semibold text-gray-700 mb-3">26/3, Sadashiv Colony, Lane No 1, Thergaon, Pune -411 033, Maharashtra, India</p>
                   <p className="relative z-10 text-sm text-gray-500 mb-6">Export Business Center</p>
                   
-                  <a href="https://maps.google.com/?q=26/3,Sadashiv+Colony,Lane+No+1,Thergaon,Pune+411033" target="_blank" rel="noopener noreferrer" className="relative z-10 inline-flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-300">
+                  <a href="https://maps.google.com/?q=26/3,Sadashiv+Colony,Lane+No+1,Thergaon,Pune+411033,Maharashtra,India" target="_blank" rel="noopener noreferrer" className="relative z-10 inline-flex items-center bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors duration-300">
                     <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -304,7 +304,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="text-3xl font-bold text-gray-900">Find Us</h3>
-                        <p className="text-gray-600 text-lg">Visit our office at 26/3, Sadashiv Colony, Lane No 1, Thergaon, Pune -411 033</p>
+                        <p className="text-gray-600 text-lg">Visit our office at 26/3, Sadashiv Colony, Lane No 1, Thergaon, Pune -411 033, Maharashtra, India</p>
                       </div>
                     </div>
                 </div>
@@ -345,7 +345,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h4 className="font-bold text-gray-900 mb-1">Location</h4>
-                        <p className="text-gray-700">26/3, Sadashiv Colony, Lane No 1, Thergaon, Pune -411 033</p>
+                        <p className="text-gray-700">26/3, Sadashiv Colony, Lane No 1, Thergaon, Pune -411 033, Maharashtra, India</p>
                         <p className="text-sm text-gray-500">Export Business Center</p>
                       </div>
                     </div>
