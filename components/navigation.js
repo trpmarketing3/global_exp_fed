@@ -53,6 +53,15 @@ const Navigation = (props) => {
             
               <div className="w-px h-6 bg-gray-600"></div>
               <a 
+                href="/consultancy" 
+                className={`px-4 py-4 text-sm font-medium uppercase hover:text-orange-600 transition-colors duration-200 ${
+                  isActive('/consultancy') ? 'text-orange-600' : 'text-white'
+                }`}
+              >
+                CONSULTANCY & BUSINESS ADVISOR
+              </a>
+              <div className="w-px h-6 bg-gray-600"></div>
+              <a 
                 href="/contact" 
                 className={`px-4 py-4 text-sm font-medium uppercase hover:text-orange-600 transition-colors duration-200 ${
                   isActive('/contact') ? 'text-orange-600' : 'text-white'
@@ -112,6 +121,15 @@ const Navigation = (props) => {
                     className="px-4 py-3 text-sm font-medium uppercase hover:text-orange-600 transition-colors duration-200 rounded-md text-white"
                   >
                     OUR PRODUCTS
+                  </a>
+                  <a 
+                    href="/consultancy" 
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`px-4 py-3 text-sm font-medium uppercase hover:text-orange-600 transition-colors duration-200 rounded-md ${
+                      isActive('/consultancy') ? 'text-orange-600 bg-gray-700' : 'text-white'
+                    }`}
+                  >
+                    CONSULTANCY & BUSINESS ADVISOR
                   </a>
                   <a 
                     href="/contact" 
